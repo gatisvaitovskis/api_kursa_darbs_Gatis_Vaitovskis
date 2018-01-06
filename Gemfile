@@ -1,0 +1,5 @@
+gem 'bundler'
+gem 'cucumber'
+gem 'json'
+gem 'rest-client'
+gem 'test-unit'
