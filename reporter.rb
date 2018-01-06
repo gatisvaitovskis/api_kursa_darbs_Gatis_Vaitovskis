@@ -17,7 +17,7 @@ all_scenarious = passed_scenarious_count + failed_scenarious_count
 pass_rate_percentage = (passed_scenarious_count.to_f / all_scenarious.to_f * 100).round(2)
 failed_rate_percentage = (failed_scenarious_count.to_f / all_scenarious.to_f * 100).round(2)
 # Tiek izveidots cucumber reporta links. Build URL tiek ņemts no Jenkins env mainīgajiem
-cucumber_report_link = "#{build_url}cucumber-html-reports/overview-features.html"
+cucumber_report_link = build_url
 
 thumbnail = { 'url' => 'http://www.freepngimg.com/download/assault%20rifle/6-ak-47-kalash-russian-assault-rifle-png.png' }
 fields = []
