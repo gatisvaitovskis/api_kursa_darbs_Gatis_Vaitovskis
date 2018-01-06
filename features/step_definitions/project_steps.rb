@@ -19,3 +19,7 @@ end
 And(/^I create new collection: (.*) with step: (.*)$/) do |collection_name, step_name|
   create_new_test_collection(collection_name, step_name)
 end
+
+Then(/^I create new test case: (.*)$/) do |case_name|
+  create_new_test_case(case_name)
+end
