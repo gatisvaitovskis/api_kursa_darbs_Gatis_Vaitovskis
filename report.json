@@ -1,0 +1,280 @@
+[
+  {
+    "uri": "features/API_gala_darbs.feature",
+    "id": "api-gala-darbs",
+    "keyword": "Feature",
+    "name": "API gala darbs",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "api-gala-darbs;2.uzdevums",
+        "keyword": "Scenario",
+        "name": "2.Uzdevums",
+        "description": "",
+        "line": 3,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I login apimation",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 675559000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I find and activate project: API kursa darbs",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 665389000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I create new environment: PREPROD",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 250452000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I add global variable: $user with value: gatis.vaitovskis@gmail.com",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 327443000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I add global variable: $password with value: password",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 328223000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I add global variable: $project_id with value: current_id",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 652190000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I create new collection: Login with step: Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503510000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I create new collection: Projects  with step: Set active project",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 458553000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 786548000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-gala-darbs;3.uzdevums",
+        "keyword": "Scenario",
+        "name": "3.Uzdevums",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I login apimation",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 461847000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I find and activate project: API kursa darbs",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 705558000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I create new environment: PREPROD",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 295548000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I add global variable: $user with value: gatis.vaitovskis@gmail.com",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 325061000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I add global variable: $password with value: password",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 322433000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I add global variable: $project_id with value: current_id",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 329427000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I create new collection: Login with step: Login",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 473507000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I create new collection: Projects  with step: Set active project",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 452070000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I create new test case: Set project as active",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/project_steps.rb:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 632738000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 964137000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
