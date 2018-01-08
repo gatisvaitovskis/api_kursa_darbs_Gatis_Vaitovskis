@@ -44,15 +44,13 @@ all_cases = passed_cases.to_i + failed_cases.to_i
 pass_rate_percentage = (passed_cases.to_f / all_cases.to_f * 100).round(2)
 failed_rate_percentage = (failed_cases.to_f / all_cases.to_f * 100).round(2)
 # Tiek izveidots cucumber reporta links. Build URL tiek ņemts no Jenkins env mainīgajiem
-cucumber_report_link = build_url
+cucumber_report_link = build_url.to_s + 'cucumber-html-reports/overview-features.html'
 
-thumbnail = { 'url' => 'http://www.freepngimg.com/download/assault%20rifle/6-ak-47-kalash-russian-assault-rifle-png.png' }
 fields = []
-
-#fields masīvā tiek salikts viss nepieciešamais info kam jāparādas čatā
+# fields masīvā tiek salikts viss nepieciešamais info kam jāparādas čatā
 fields.push({ 'name' => 'Job name','value' => job_name.to_s })
 fields.push({ 'name' => 'Build number', 'value' => build_number.to_s })
-fields.push({ 'name' => 'Cucumber report link','value' => cucumber_report_link.to_s })
+fields.push({ 'name' => 'Cucumber report link', 'value' => cucumber_report_link.to_s })
 fields.push({ 'name' => 'Pass rate','value' => pass_rate_percentage.to_s + '%'})
 fields.push({ 'name' => 'Failed rate','value' => failed_rate_percentage.to_s + '%'})
 fields.push({ 'name' => 'Passed','value' => passed_cases.to_s})
@@ -60,6 +58,7 @@ fields.push({ 'name' => 'Failed','value' => failed_cases.to_s})
 fields.push({ 'name' => 'Total','value' => all_cases.to_s})
 
 embed = []
+thumbnail = { 'url' => 'http://www.freepngimg.com/download/assault%20rifle/6-ak-47-kalash-russian-assault-rifle-png.png' }
 embed.push({ 'color' => 16024386,
              'fields' => fields,
              'thumbnail' => thumbnail })
