@@ -57,8 +57,6 @@ fields.push({ 'name' => 'Passed','value' => passed_cases.to_s})
 fields.push({ 'name' => 'Failed','value' => failed_cases.to_s})
 fields.push({ 'name' => 'Total','value' => all_cases.to_s})
 
-puts fields
-
 embed = []
 thumbnail = { 'url' => 'http://www.freepngimg.com/download/assault%20rifle/6-ak-47-kalash-russian-assault-rifle-png.png' }
 embed.push({ 'color' => 16024386,
