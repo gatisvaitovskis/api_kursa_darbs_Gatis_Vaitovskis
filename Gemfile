@@ -1,5 +1,6 @@
 gem 'bundler'
 gem 'cucumber'
 gem 'json'
+gem 'report_builder'
 gem 'rest-client'
 gem 'test-unit'
