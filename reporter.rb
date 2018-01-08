@@ -43,7 +43,7 @@ all_cases = passed_cases.to_i + failed_cases.to_i
 pass_rate_percentage = (passed_cases.to_f / all_cases.to_f * 100).round(2)
 failed_rate_percentage = (failed_cases.to_f / all_cases.to_f * 100).round(2)
 # Tiek izveidots cucumber reporta links
-cucumber_report_link = "http://jenkinsautomation.tdlbox.com/job/Kursa_darbs_Gatis_Vaitovskis/job/Kursa_darbs_Jenkins_Job_Gatis_Vaitovskis/ #{build_number}/cucumber-html-reports/overview-features.html"
+cucumber_report_link = "http://jenkinsautomation.tdlbox.com/job/Kursa_darbs_Gatis_Vaitovskis/job/Kursa_darbs_Jenkins_Job_Gatis_Vaitovskis/ #{build_number.to_s}/cucumber-html-reports/overview-features.html"
 
 fields = []
 # fields masīvā tiek salikts viss nepieciešamais info kam jāparādas čatā
