@@ -44,7 +44,7 @@ all_cases = passed_cases.to_i + failed_cases.to_i
 pass_rate_percentage = (passed_cases.to_f / all_cases.to_f * 100).round(2)
 failed_rate_percentage = (failed_cases.to_f / all_cases.to_f * 100).round(2)
 # Tiek izveidots cucumber reporta links. Build URL tiek ņemts no Jenkins env mainīgajiem
-cucumber_report_link = build_url.to_s + 'cucumber-html-reports/overview-features.html'
+cucumber_report_link = build_url + 'cucumber-html-reports/overview-features.html'
 
 fields = []
 # fields masīvā tiek salikts viss nepieciešamais info kam jāparādas čatā
