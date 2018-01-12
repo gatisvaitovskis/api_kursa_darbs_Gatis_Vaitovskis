@@ -5,6 +5,7 @@ class Project
   attr_accessor :environments
   attr_accessor :collections
   attr_accessor :cases
+  attr_accessor :global_vars
 
   def initialize(project)
     @id = project['id']
@@ -12,5 +13,6 @@ class Project
     @environments = []
     @collections = []
     @cases = []
+    @global_vars = []
   end
 end

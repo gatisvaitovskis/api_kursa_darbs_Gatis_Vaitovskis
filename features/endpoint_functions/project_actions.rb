@@ -26,7 +26,6 @@ def set_project_as_active(project_id)
 
   # Aktivizē izvēlēto projektu
   set_active_project = put("http://apimation.com/projects/active/#{project_id}",
-                           headers: { 'Content-Type' => 'application/json' },
                            cookies: @test_user.session_cookie)
 
   # Check if project is set to active
@@ -69,6 +68,7 @@ def add_global_variable(environment_id, global_key, global_value)
                             payload: global_variable_payload.to_json)
   # Pārbauda vai globālais mainīgais pievienots veiksmīgi
   assert_equal(204, add_global_response.code, "Problem adding apimation global variable! #{add_global_response}")
+  @project.global_vars.push(response_hash['global_vars'])
 end
 
 def create_new_test_collection(collection_name, step_name)
@@ -79,10 +79,10 @@ def create_new_test_collection(collection_name, step_name)
   # ifs, lai izveidotu specifiskas vērtības priekš step_payloada
   if collection_name == 'Login'
     request_url = "http://www.apimation.com/login"
-    body = "{\"login\":\"$user\",\"password\":\"$password\"}\n"
+    body = "{\"login\":\"#{@project.global_vars.last[0]['key']}\",\"password\":\"#{@project.global_vars.last[1]['key']}\"}\n"
     method = "POST"
   else
-    request_url = "http://apimation.com/projects/active/$project_id"
+    request_url = "http://apimation.com/projects/active/#{@project.id}"
     body = ""
     method = "PUT"
 end
@@ -185,7 +185,7 @@ def create_new_test_case(case_name)
               {
                   "step_name" => "Login",
                   "url" => "http://www.apimation.com/login",
-                  "body" => "{\"login\":\"$user\",\"password\":\"$password\"}\n",
+                  "body" => "{\"login\":\"#{@project.global_vars.last[0]['key']}\",\"password\":\"#{@project.global_vars.last[1]['key']}\"}\n",
                   "formData" => [
                       {
                           "type" => "text",
@@ -214,12 +214,12 @@ def create_new_test_case(case_name)
                   "method" => "POST",
                   "greps" => [
                       {
-                          "type": "json",
-                          "expression": "",
-                          "varname": ""
+                          "type" => "json",
+                          "expression" => "",
+                          "varname" => ""
                       }
                   ],
-                  "asserts": []
+                  "asserts"=> []
               },
               {
                   "step_name" => "Set active project",
@@ -244,7 +244,7 @@ def create_new_test_case(case_name)
                       "filename" => ""
                   },
                   "type" => "raw",
-                  "headers": [
+                  "headers"=> [
                       {
                           "name" => "Content-Type",
                           "value" => "application/json"
